@@ -13,7 +13,7 @@ import com.example.beginlayout.R.id
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var editTextSample:TextView
+    private lateinit var editTextSample:TextView
     lateinit var tvSample:TextView
     @SuppressLint("WrongViewCast", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,8 +27,9 @@ class MainActivity : AppCompatActivity() {
 
             }
 
+            @SuppressLint("SetTextI18n")
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                tvSample.setText("Text in EditText :"+s)
+                tvSample.text = "Text in EditText :$s"
             }
 
             override fun afterTextChanged(s: Editable?) {
@@ -38,12 +39,12 @@ class MainActivity : AppCompatActivity() {
         initView()
     }
 
-    fun initView(){
+    private fun initView(){
         val textView = findViewById<TextView>(id.hashtag)
         val text = "Wake up to reality. Nothing ever goes as planned in this accursed world. The more you live in our #Willmark, " +
                 "the more you realize that the only thing truly exists in this reality are merely pain and suffering"
-        val wordtoSpan:Spannable = SpannableString(text)
-        wordtoSpan.setSpan(ForegroundColorSpan(Color.BLUE), 97, 107, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-        textView.text = wordtoSpan
+        val wordToSpan:Spannable = SpannableString(text)
+        wordToSpan.setSpan(ForegroundColorSpan(Color.BLUE), 97, 107, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+        textView.text = wordToSpan
     }
 }

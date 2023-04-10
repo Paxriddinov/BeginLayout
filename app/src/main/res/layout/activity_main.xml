@@ -62,8 +62,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter your name: "
-                    />
+                    android:hint="@string/enter_your_name"
+                    android:textColorHint="#616161" />
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_marginTop="10dp"
@@ -83,8 +83,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter your surname: "
-                    />
+                    android:hint="@string/enter_your_surname"
+                    android:textColorHint="#616161" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -97,10 +97,12 @@
 
             <EditText
                 android:id="@+id/editTextSample"
-                android:layout_width="match_parent"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
-                android:hint="Enter Text..."/>
+                android:hint="@string/enter_text"
+                android:autofillHints=""
+                android:inputType="textPersonName" />
 
             <TextView
                 android:layout_marginTop="10dp"
