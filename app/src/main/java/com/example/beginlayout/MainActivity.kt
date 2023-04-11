@@ -9,7 +9,9 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.widget.TextView
+import androidx.core.text.set
 import com.example.beginlayout.R.id
+import java.net.CookieHandler
 
 class MainActivity : AppCompatActivity() {
 

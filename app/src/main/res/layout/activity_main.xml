@@ -113,6 +113,13 @@
                 android:text="@null"/>
         </LinearLayout>
 
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </com.google.android.material.appbar.AppBarLayout>
     </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>
