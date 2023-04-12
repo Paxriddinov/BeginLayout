@@ -1,9 +1,10 @@
-package com.example.beginlayout
+package com.example.beginlayout.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
+import com.example.beginlayout.R
 import com.example.beginlayout.fragments.Fragment1
 import com.example.beginlayout.fragments.Fragment2
 import com.example.beginlayout.fragments.Fragment3
@@ -12,7 +13,7 @@ import com.google.android.material.tabs.TabLayout
 
 class MainActivity2 : AppCompatActivity() {
 
-    lateinit var dataAdapter: DataAdapter
+    private lateinit var dataAdapter: DataAdapter
     lateinit var viewPager:ViewPager
     lateinit var tabLayout:TabLayout
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +22,7 @@ class MainActivity2 : AppCompatActivity() {
 
         initView()
     }
+
 
     private fun initView() {
         viewPager = findViewById(R.id.viewPager_id)
@@ -36,26 +38,4 @@ class MainActivity2 : AppCompatActivity() {
         tabLayout.setupWithViewPager(viewPager)
 
     }
-
-    override fun onStart() {
-        super.onStart()
-        Log.d("MainActivity2", "onStart: Working")
-    }
-    override fun onResume() {
-        super.onResume()
-        Log.d("MainActivity2", "onResume: Working")
-    }
-    override fun onPause() {
-        super.onPause()
-        Log.d("MainActivity2", "onPause: Working")
-    }
-    override fun onStop() {
-        super.onStop()
-        Log.d("MainActivity2", "onStop: Working")
-    }
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d("MainActivity2", "onDestroy: Working")
-    }
-
 }
